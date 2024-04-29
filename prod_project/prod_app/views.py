@@ -1,3 +1,8 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+def index(request):
+    context = {
+        'title': 'Main page'
+    }
+    return render(request, 'prod_app/index.html', context)
