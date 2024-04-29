@@ -1,2 +1,24 @@
-# Google App Engine generated folder
-appengine-generated/
+# Folders
+Lib/
+Scripts/
+share/
+
+# Files
+pyvenv.cfg
+.idea/
+*.iml
+*.pyc
+*.pyo
+__pycache__/
+.env
+
+# Virtual environment
+venv/
+
+# Static and media files
+/static/
+/media/
+
+# Database
+*.sqlite3
+*.db
