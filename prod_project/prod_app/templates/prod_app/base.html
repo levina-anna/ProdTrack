@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load static %}
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    {% block extra_css %} {% endblock %}
+</head>
+<body>
+
+{% block content %}
+{% endblock %}
+
+{% block extra_js %}
+{% endblock %}
+</body>
+</html>
