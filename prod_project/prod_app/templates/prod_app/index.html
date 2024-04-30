@@ -1,7 +1,12 @@
+{% extends 'prod_app/base.html' %}
 {% block extra_css %}
 {% endblock %}
 
 {% block content %}
+
+<h1 class="text-light">Main page</h1>
+<a href="{% url 'prod_table' %}" class="btn btn-light fs-4 btn-hover mt-3">Go to table</a>
+
 {% endblock %}
 
 {% block extra_js %}
