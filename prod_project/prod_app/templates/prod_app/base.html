@@ -10,10 +10,14 @@
     <title>{{ title }}</title>
     {% block extra_css %} {% endblock %}
 </head>
-<body>
+<body style="background-image: url('{% static 'prod_app/images/background.jpg' %}');">
 
-{% block content %}
-{% endblock %}
+<div class="container">
+    <main class="p-4">
+    {% block content %}
+    {% endblock %}
+    </main>
+</div>
 
 {% block extra_js %}
 {% endblock %}
