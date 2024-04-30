@@ -17,15 +17,14 @@
 <!-- Ряд сетки для фильтра и таблицы -->
 <div class="container-fluid">
     <div class="text-center">
-        <h1 class="mb-3 text-light">{{ title }}</h1>
 
         <!-- Таблица -->
-        <div class="table-responsive scrollable-table mx-auto">
+        <div class="table-responsive scrollable-table mx-auto mt-5">
             <table class="table table-light table-hover mx-auto">
             <thead class="table-warning">
                 <tr>
                     <th>ID</th>
-                    <th>Date</th>
+                    <th>Date produced</th>
                     <th>Container number</th>
                     <th>Product type</th>
                     <th>Volume</th>
@@ -38,7 +37,7 @@
                 {% for container in containers %}
                 <tr class="container-row" data-container-id="{{ container.id }}">
                     <td>{{ container.id }}</td>
-                    <td>{{ container.batch.date_produced|date:"d.m.Y" }}</td>
+                    <td>{{ container.batch.date_produced }}</td>
                     <td>{{ container.container_number }}</td>
                     <td>{{ container.chemical.name }}</td>
                     <td>{{ container.volume }}</td>
@@ -60,7 +59,7 @@
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content bg-light">
             <div class="modal-header">
-                <h5 class="modal-title" id="editContainerModalLabel">Edit container</h5>
+                <h5 class="modal-title" id="editContainerModalLabel">Edit data</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -73,7 +72,7 @@
                         <span id="containerIdModal"></span>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">Container number:</label>
+                        <label class="form-label">Reagent number:</label>
                         <span id="containerNumberModal"></span>
                     </div>
                     <div class="mb-3">
