@@ -28,8 +28,12 @@ class ReagentContainer(models.Model):
     container_number = models.IntegerField(null=True, blank=True, default=0, verbose_name='Container number')
     volume = models.DecimalField(null=True, blank=True, max_digits=10, decimal_places=2, verbose_name='Volume (liters)')
     chemical = models.ForeignKey(Chemical, on_delete=models.CASCADE, verbose_name='Chemical')
-    production = models.BooleanField(verbose_name='Production')
-    approved = models.BooleanField(null=True, blank=True, verbose_name='Approved')
+    is_recyclable = models.BooleanField(default=False, verbose_name='Recyclable')
+    purity_level = models.IntegerField(default=0, verbose_name='Purity Level (%)')
+    storage_condition = models.CharField(max_length=50, choices=[
+        ('ambient', 'Ambient'), ('refrigerated', 'Refrigerated'), ('frozen', 'Frozen')],
+                                         default='ambient', verbose_name='Storage Condition')
+    notes = models.TextField(null=True, blank=True, verbose_name='Notes')
 
     def __str__(self):
         return f"Container {self.container_number} for {self.chemical}"
