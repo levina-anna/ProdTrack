@@ -27,6 +27,14 @@ python manage.py migrate
 python manage.py runserver
 ```
 
+## Initial Data Loading
+
+This project includes an initial data dump in `initial_data.json` that can be used to populate the database with sample data. To load this data into your database, ensure that you have completed all migrations, and then run the following command:
+
+```bash
+python manage.py loaddata initial_data.json
+```
+
 ## Technologies Used
 
 - Django 4.2.5
