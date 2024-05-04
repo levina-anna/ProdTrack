@@ -21,4 +21,4 @@ RUN chmod +x entrypoint.sh
 COPY create_superuser.py ./
 ENTRYPOINT ["./entrypoint.sh"]
 EXPOSE 8008
-CMD ["gunicorn", "prod_app.wsgi:application", "--bind", "0.0.0.0:8008"]
+CMD ["gunicorn", "prod_project.wsgi:application", "--bind", "0.0.0.0:8008"]
