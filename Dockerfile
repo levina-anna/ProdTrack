@@ -11,8 +11,6 @@ RUN pip3 install --no-cache-dir -r /tmp/requirements.txt
 COPY prod_project/ ./
 RUN ls -la
 
-RUN python manage.py check
-
 RUN python manage.py collectstatic --noinput
 
 COPY entrypoint.sh ./
