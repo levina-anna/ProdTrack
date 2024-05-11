@@ -19,20 +19,8 @@ A Django app using SQLite for management and updates of reagent container data
 ```bash
 git clone <repository-url>
 cd <project-directory-name>
-# Install dependencies
-pip install -r requirements.txt
-# Apply database migrations
-python manage.py migrate
-# Run the application
-python manage.py runserver
-```
-
-## Initial Data Loading
-
-This project includes an initial data dump in `initial_data.json` that can be used to populate the database with sample data. To load this data into your database, ensure that you have completed all migrations, and then run the following command:
-
-```bash
-python manage.py loaddata initial_data.json
+# Build and run the application using Docker
+docker-compose up --build
 ```
 
 ## Technologies Used
