@@ -1,0 +1,10 @@
+version: '3'
+services:
+  web:
+    image: annalevina/prodtrack:latest
+    volumes:
+      - .:/prod_project
+    ports:
+      - "8008:8008"
+    environment:
+      - DEBUG=1
